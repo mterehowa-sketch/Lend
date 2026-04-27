@@ -10,10 +10,45 @@
 // Текущий год в футере
 document.getElementById('year').textContent = String(new Date().getFullYear())
 
+// Мягкий "живой" glow в фоне — следует за курсором/тапом.
+// На touch-устройствах будет работать по последнему касанию.
+const bg = document.querySelector('.bg')
+if (bg) {
+  const setGlow = (x, y) => {
+    const mx = Math.max(0, Math.min(100, (x / window.innerWidth) * 100))
+    const my = Math.max(0, Math.min(100, (y / window.innerHeight) * 100))
+    bg.style.setProperty('--mx', `${mx}%`)
+    bg.style.setProperty('--my', `${my}%`)
+  }
+
+  window.addEventListener(
+    'pointermove',
+    (e) => {
+      setGlow(e.clientX, e.clientY)
+    },
+    { passive: true },
+  )
+
+  window.addEventListener(
+    'touchstart',
+    (e) => {
+      const t = e.touches && e.touches[0]
+      if (!t) return
+      setGlow(t.clientX, t.clientY)
+    },
+    { passive: true },
+  )
+}
+
 // Reveal on scroll (аккуратно, без тяжёлых библиотек)
 const revealNodes = Array.from(document.querySelectorAll('.reveal'))
 
 if ('IntersectionObserver' in window) {
+  // Чуть более "дорогой" эффект: минимальный stagger по порядку элементов на странице.
+  revealNodes.forEach((n, i) => {
+    n.style.transitionDelay = `${Math.min(i * 60, 360)}ms`
+  })
+
   const io = new IntersectionObserver(
     (entries) => {
       for (const entry of entries) {
