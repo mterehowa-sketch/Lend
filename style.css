@@ -401,7 +401,7 @@ a {
 
 /* Hero */
 .hero {
-  padding: 52px 0 10px 0;
+  padding: 52px 0 28px 0;
 }
 .hero__grid {
   display: grid;
@@ -655,7 +655,7 @@ a {
 
 /* Sections */
 .section {
-  padding: 54px 0;
+  padding: 56px 0;
 }
 .section__head {
   margin-bottom: 18px;
@@ -887,27 +887,14 @@ a {
   font-size: 16px;
 }
 
-/* About */
-.about {
+/* About (2 колонки + место под фото) */
+.about2 {
   display: grid;
-  gap: 12px;
-}
-.about__text {
-  border-radius: 24px;
-  padding: 18px;
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: blur(12px);
-  color: rgba(255, 255, 255, 0.78);
-}
-.about__text p {
-  margin: 0 0 12px 0;
-}
-.about__text p:last-child {
-  margin-bottom: 0;
+  gap: 16px;
+  align-items: start;
 }
 
-.focus {
+.about2__left {
   border-radius: 24px;
   padding: 18px;
   background: var(--glass);
@@ -915,29 +902,72 @@ a {
   backdrop-filter: blur(12px);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
-.focus__title {
-  font-weight: 800;
-}
-.focus__grid {
+
+.about2__left .h2 {
   margin-top: 12px;
-  display: grid;
-  gap: 10px;
 }
-.focus__item {
-  border-radius: 18px;
-  padding: 14px;
-  background: rgba(0, 0, 0, 0.22);
+
+.about2__p {
+  margin: 12px 0 0 0;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.about2__right {
+  position: relative;
+}
+
+.photo-card {
+  position: relative;
+  border-radius: 24px;
+  padding: 16px;
+  background: var(--glass);
   border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-violet), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  overflow: hidden;
 }
-.focus__item:hover {
-  border-color: var(--glass-border-strong);
+
+.photo-card__glow {
+  position: absolute;
+  inset: -60px;
+  background: radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.20), transparent 60%),
+    radial-gradient(circle at 70% 40%, rgba(139, 92, 246, 0.22), transparent 60%),
+    radial-gradient(circle at 55% 85%, rgba(6, 182, 212, 0.14), transparent 65%);
+  filter: blur(26px);
+  opacity: 0.85;
+  pointer-events: none;
 }
-.focus__k {
+
+.photo-card__frame {
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.26);
+  height: 220px; /* не слишком высокая карточка */
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.photo-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-card__placeholder {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.photo-card__caption {
+  position: relative;
+  margin-top: 12px;
   font-size: 12px;
-}
-.focus__v {
-  margin-top: 6px;
-  font-weight: 800;
+  color: rgba(209, 213, 219, 0.92);
 }
 
 /* Contacts */
@@ -1056,10 +1086,6 @@ a {
   .niches {
     grid-template-columns: repeat(3, 1fr);
   }
-  .about {
-    grid-template-columns: 2fr 1fr;
-    align-items: start;
-  }
   .contact-card__actions {
     flex-direction: row;
   }
@@ -1072,8 +1098,12 @@ a {
     grid-template-columns: 1.05fr 0.95fr;
     gap: 30px;
   }
-  .hero__title {
-    font-size: 52px;
+  .about2 {
+    grid-template-columns: 1.35fr 0.65fr;
+    gap: 18px;
+  }
+  .photo-card__frame {
+    height: 260px;
   }
 }
 

@@ -7,7 +7,7 @@
       name="description"
       content="Портфолио: сайты, боты и digital‑продукты с помощью ИИ и vibe‑coding."
     />
-    <title>Maria Digital Lab — AI & Digital</title>
+    <title>Моя цифровая лаборатория — AI & Digital</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -32,7 +32,7 @@
         <a class="brand" href="#top" aria-label="На главную">
           <span class="brand__mark" aria-hidden="true">MA</span>
           <span class="brand__text">
-            <span class="brand__title">Maria Digital Lab</span>
+            <span class="brand__title">Моя цифровая лаборатория</span>
             <span class="brand__subtitle">AI × vibe‑coding</span>
           </span>
         </a>
@@ -95,12 +95,12 @@
               <div class="panel__glow" aria-hidden="true"></div>
               <div class="panel__head">
                 <div>
-                  <div class="panel__kicker">AI console</div>
-                  <div class="panel__title">Prototype Dashboard</div>
+                  <div class="panel__kicker">AI-консоль</div>
+                  <div class="panel__title">Панель прототипа</div>
                 </div>
                 <div class="panel__status">
                   <span class="status-dot" aria-hidden="true"></span>
-                  <span>online</span>
+                  <span>онлайн</span>
                 </div>
               </div>
 
@@ -115,19 +115,19 @@
 
               <div class="meters" aria-label="Индикаторы прогресса">
                 <div class="meter">
-                  <div class="meter__top"><span>structure</span><span class="meter__val">78%</span></div>
+                  <div class="meter__top"><span>структура</span><span class="meter__val">78%</span></div>
                   <div class="meter__track"><div class="meter__fill meter__fill--blue" style="width: 78%"></div></div>
                 </div>
                 <div class="meter">
-                  <div class="meter__top"><span>ux logic</span><span class="meter__val">84%</span></div>
+                  <div class="meter__top"><span>UX-логика</span><span class="meter__val">84%</span></div>
                   <div class="meter__track"><div class="meter__fill meter__fill--violet" style="width: 84%"></div></div>
                 </div>
                 <div class="meter">
-                  <div class="meter__top"><span>prototype</span><span class="meter__val" id="meterPrototype">45%</span></div>
+                  <div class="meter__top"><span>прототип</span><span class="meter__val" id="meterPrototype">45%</span></div>
                   <div class="meter__track"><div class="meter__fill meter__fill--mint" id="meterPrototypeFill" style="width: 45%"></div></div>
                 </div>
                 <div class="meter">
-                  <div class="meter__top"><span>launch readiness</span><span class="meter__val" id="meterLaunch">38%</span></div>
+                  <div class="meter__top"><span>готовность к запуску</span><span class="meter__val" id="meterLaunch">38%</span></div>
                   <div class="meter__track"><div class="meter__fill meter__fill--blue" id="meterLaunchFill" style="width: 38%"></div></div>
                 </div>
               </div>
@@ -135,7 +135,7 @@
               <div class="pipeline" aria-label="Этапы">
                 <div class="pipeline__top">
                   <span>Idea → Logic → Prototype → Launch</span>
-                  <span class="muted">step <span id="pipelineIdx">1</span>/4</span>
+                  <span class="muted">шаг <span id="pipelineIdx">1</span>/4</span>
                 </div>
                 <div class="pipeline__grid" id="pipelineGrid">
                   <div class="pipeline__cell is-on">Idea</div>
@@ -149,17 +149,54 @@
 
               <div class="panel__chips">
                 <div class="chip">
-                  <div class="chip__k">latency</div>
+                  <div class="chip__k">отклик</div>
                   <div class="chip__v">~ 120ms</div>
                 </div>
                 <div class="chip">
-                  <div class="chip__k">iterations</div>
-                  <div class="chip__v">rapid</div>
+                  <div class="chip__k">итерации</div>
+                  <div class="chip__v">быстро</div>
                 </div>
                 <div class="chip">
-                  <div class="chip__k">output</div>
+                  <div class="chip__k">результат</div>
                   <div class="chip__v">MVP / demo</div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- О себе -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="about2 reveal">
+            <div class="about2__left">
+              <div class="eyebrow">О себе</div>
+              <h2 class="h2">Digital‑специалист, который собирает работающие прототипы</h2>
+
+              <!-- Текст можно менять здесь -->
+              <p class="about2__p">
+                Я Мария, digital-специалист на старте практики. Изучаю нейросети, SMM, создание сайтов, ботов и
+                digital-продуктов. Собираю проекты с помощью ИИ, no-code и vibe-coding подхода: от идеи и логики до
+                первого рабочего прототипа.
+              </p>
+              <p class="about2__p muted">
+                Для меня важно не просто сделать красивую страницу, а продумать, как пользователь будет понимать
+                предложение, взаимодействовать с проектом и оставлять заявку.
+              </p>
+            </div>
+
+            <div class="about2__right">
+              <div class="photo-card" aria-label="Место под фото">
+                <!--
+                  ВАЖНО: когда будет фото, замените placeholder на:
+                  <img class="photo-card__img" src="./your-photo.jpg" alt="Мария" />
+                -->
+                <div class="photo-card__glow" aria-hidden="true"></div>
+                <div class="photo-card__frame">
+                  <div class="photo-card__placeholder">место для фото</div>
+                </div>
+                <div class="photo-card__caption">AI × SMM × vibe-coding</div>
               </div>
             </div>
           </div>
@@ -413,50 +450,6 @@
         </div>
       </section>
 
-      <!-- О себе -->
-      <section class="section" id="about">
-        <div class="container">
-          <div class="section__head reveal">
-            <div class="eyebrow">О себе</div>
-            <h2 class="h2">Digital‑специалист, который собирает работающие прототипы</h2>
-          </div>
-
-          <div class="about reveal">
-            <div class="about__text">
-              <!-- Текст можно менять здесь -->
-              <p>
-                Я Мария, digital-специалист на старте практики. Изучаю нейросети, SMM, создание сайтов, ботов и
-                digital-продуктов. Собираю проекты с помощью ИИ, no-code и vibe-coding подхода: от идеи и логики до
-                первого рабочего прототипа.
-              </p>
-              <p>
-                Для меня важно не просто сделать красивую страницу, а продумать, как пользователь будет понимать
-                предложение, взаимодействовать с проектом и оставлять заявку.
-              </p>
-            </div>
-            <div class="about__focus">
-              <div class="focus">
-                <div class="focus__title">Фокус</div>
-                <div class="focus__grid">
-                  <div class="focus__item">
-                    <div class="focus__k muted">стиль</div>
-                    <div class="focus__v">Dark AI / Fintech / Neon</div>
-                  </div>
-                  <div class="focus__item">
-                    <div class="focus__k muted">цель</div>
-                    <div class="focus__v">запускать быстро</div>
-                  </div>
-                  <div class="focus__item">
-                    <div class="focus__k muted">ценность</div>
-                    <div class="focus__v">логика + UX</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Контакты -->
       <section class="section" id="contacts">
         <div class="container">
@@ -499,7 +492,7 @@
 
     <footer class="footer">
       <div class="container footer__inner">
-        <div class="muted">© <span id="year"></span> Maria Digital Lab</div>
+        <div class="muted">© <span id="year"></span> Моя цифровая лаборатория</div>
         <div class="muted">sites • bots • AI • calculators • games</div>
       </div>
     </footer>
