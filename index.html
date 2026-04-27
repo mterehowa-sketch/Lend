@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Портфолио: сайты, боты и digital‑продукты с помощью ИИ и vibe‑coding."
+    />
+    <title>Maria Digital Lab — AI & Digital</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!--
+      Статический сайт без React/Vite/npm/Node/CDN.
+      Можно открыть двойным кликом по этому файлу (file://) и публиковать через GitHub Pages.
+    -->
+
+    <div class="bg" aria-hidden="true">
+      <div class="bg__blob bg__blob--violet"></div>
+      <div class="bg__blob bg__blob--blue"></div>
+      <div class="bg__blob bg__blob--mint"></div>
+      <div class="bg__grid"></div>
+      <div class="bg__top-fade"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="top">
+      <div class="container header__inner">
+        <a class="brand" href="#top" aria-label="На главную">
+          <span class="brand__mark" aria-hidden="true">MA</span>
+          <span class="brand__text">
+            <span class="brand__title">Maria Digital Lab</span>
+            <span class="brand__subtitle">AI × vibe‑coding</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Навигация">
+          <a class="nav__link" href="#skills">Навыки</a>
+          <a class="nav__link" href="#projects">Проекты</a>
+          <a class="nav__link" href="#solutions">Решения под ниши</a>
+          <a class="nav__link" href="#about">О себе</a>
+          <a class="nav__link" href="#contacts">Контакты</a>
+        </nav>
+
+        <div class="header__actions">
+          <a class="btn btn--primary" href="#contacts">Обсудить проект <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__copy reveal">
+            <div class="pills">
+              <span class="pill pill--blue"><span class="pill__dot"></span>sites</span>
+              <span class="pill pill--violet"><span class="pill__dot"></span>bots</span>
+              <span class="pill pill--mint"><span class="pill__dot"></span>AI</span>
+            </div>
+
+            <h1 class="hero__title">Создаю сайты, ботов и digital‑проекты с помощью ИИ</h1>
+            <p class="hero__subtitle">
+              Помогаю бизнесу и экспертам быстро запускать лендинги, чат-боты, AI-ассистентов, калькуляторы, мини-игры
+              и первые рабочие прототипы.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#projects">Посмотреть проекты →</a>
+              <a class="btn btn--glass" href="#contacts">Обсудить задачу</a>
+            </div>
+
+            <div class="hero__stats">
+              <div class="glass-card">
+                <div class="glass-card__kicker">фокус</div>
+                <div class="glass-card__value">быстрый запуск</div>
+              </div>
+              <div class="glass-card">
+                <div class="glass-card__kicker">подход</div>
+                <div class="glass-card__value">логика → прототип</div>
+              </div>
+              <div class="glass-card">
+                <div class="glass-card__kicker">форматы</div>
+                <div class="glass-card__value">web / bots / AI</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI-панель справа -->
+          <div class="hero__panel reveal">
+            <div class="panel">
+              <div class="panel__glow" aria-hidden="true"></div>
+              <div class="panel__head">
+                <div>
+                  <div class="panel__kicker">AI console</div>
+                  <div class="panel__title">Prototype Dashboard</div>
+                </div>
+                <div class="panel__status">
+                  <span class="status-dot" aria-hidden="true"></span>
+                  <span>online</span>
+                </div>
+              </div>
+
+              <div class="terminal" role="region" aria-label="Системная панель">
+                <div class="terminal__line terminal__line--muted">&gt; system: Maria Digital Lab</div>
+                <div class="terminal__line terminal__line--muted">&gt; modules: sites / bots / AI / games / calculators</div>
+                <div class="terminal__line terminal__line--muted">&gt; status: ready to prototype</div>
+                <div class="terminal__line">
+                  &gt; pipeline: <span class="terminal__accent" id="pipelineStep">Idea</span><span class="caret" aria-hidden="true"></span>
+                </div>
+              </div>
+
+              <div class="meters" aria-label="Индикаторы прогресса">
+                <div class="meter">
+                  <div class="meter__top"><span>structure</span><span class="meter__val">78%</span></div>
+                  <div class="meter__track"><div class="meter__fill meter__fill--blue" style="width: 78%"></div></div>
+                </div>
+                <div class="meter">
+                  <div class="meter__top"><span>ux logic</span><span class="meter__val">84%</span></div>
+                  <div class="meter__track"><div class="meter__fill meter__fill--violet" style="width: 84%"></div></div>
+                </div>
+                <div class="meter">
+                  <div class="meter__top"><span>prototype</span><span class="meter__val" id="meterPrototype">45%</span></div>
+                  <div class="meter__track"><div class="meter__fill meter__fill--mint" id="meterPrototypeFill" style="width: 45%"></div></div>
+                </div>
+                <div class="meter">
+                  <div class="meter__top"><span>launch readiness</span><span class="meter__val" id="meterLaunch">38%</span></div>
+                  <div class="meter__track"><div class="meter__fill meter__fill--blue" id="meterLaunchFill" style="width: 38%"></div></div>
+                </div>
+              </div>
+
+              <div class="pipeline" aria-label="Этапы">
+                <div class="pipeline__top">
+                  <span>Idea → Logic → Prototype → Launch</span>
+                  <span class="muted">step <span id="pipelineIdx">1</span>/4</span>
+                </div>
+                <div class="pipeline__grid" id="pipelineGrid">
+                  <div class="pipeline__cell is-on">Idea</div>
+                  <div class="pipeline__cell">Logic</div>
+                  <div class="pipeline__cell">Prototype</div>
+                  <div class="pipeline__cell">Launch</div>
+                </div>
+              </div>
+
+              <div class="hairline" aria-hidden="true"></div>
+
+              <div class="panel__chips">
+                <div class="chip">
+                  <div class="chip__k">latency</div>
+                  <div class="chip__v">~ 120ms</div>
+                </div>
+                <div class="chip">
+                  <div class="chip__k">iterations</div>
+                  <div class="chip__v">rapid</div>
+                </div>
+                <div class="chip">
+                  <div class="chip__k">output</div>
+                  <div class="chip__v">MVP / demo</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Что я создаю -->
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section__head reveal">
+            <div class="eyebrow">Что я создаю</div>
+            <h2 class="h2">Форматы, которые можно быстро запустить</h2>
+          </div>
+
+          <div class="cards reveal">
+            <article class="card">
+              <div class="card__icon" aria-hidden="true">⬢</div>
+              <h3 class="card__title">Сайты и лендинги</h3>
+              <p class="card__text">Структура, оффер, блоки доверия и понятный путь пользователя до заявки.</p>
+            </article>
+            <article class="card">
+              <div class="card__icon" aria-hidden="true">✦</div>
+              <h3 class="card__title">Telegram / VK боты</h3>
+              <p class="card__text">Сценарии, заявки, быстрые ответы, запись и первичная квалификация лидов.</p>
+            </article>
+            <article class="card">
+              <div class="card__icon" aria-hidden="true">◎</div>
+              <h3 class="card__title">AI-ассистенты</h3>
+              <p class="card__text">Помощники для консультаций, подбора, ответов на вопросы и поддержки на сайте.</p>
+            </article>
+            <article class="card">
+              <div class="card__icon" aria-hidden="true">⌁</div>
+              <h3 class="card__title">Калькуляторы и интерактивы</h3>
+              <p class="card__text">Инструменты, которые повышают вовлечённость и помогают принять решение.</p>
+            </article>
+            <article class="card">
+              <div class="card__icon" aria-hidden="true">⟐</div>
+              <h3 class="card__title">Мини-игры</h3>
+              <p class="card__text">Лёгкие игровые механики для эмоций, объяснения ценности и удержания внимания.</p>
+            </article>
+            <article class="card">
+              <div class="card__icon" aria-hidden="true">▣</div>
+              <h3 class="card__title">Простые приложения и прототипы</h3>
+              <p class="card__text">MVP-уровень: быстро проверить идею, механику, логику и интерфейс.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Процесс работы -->
+      <section class="section" id="process">
+        <div class="container">
+          <div class="section__head reveal">
+            <div class="eyebrow">Процесс работы</div>
+            <h2 class="h2">Работаю не хаотично, а через логику проекта</h2>
+            <p class="lead muted">Оформляю задачу в понятный workflow — так быстрее получается сильный прототип.</p>
+          </div>
+
+          <div class="workflow reveal">
+            <div class="workflow__top">
+              <div class="workflow__title">Workflow</div>
+              <div class="muted">Idea → Logic → Prototype → Launch</div>
+            </div>
+            <div class="workflow__grid">
+              <div class="step">
+                <div class="step__top"><span class="muted">step</span><span class="muted">01</span></div>
+                <div class="step__title">Разбираю задачу бизнеса</div>
+                <div class="step__text">Что нужно получить и какой результат важен.</div>
+              </div>
+              <div class="step">
+                <div class="step__top"><span class="muted">step</span><span class="muted">02</span></div>
+                <div class="step__title">Продумываю путь клиента</div>
+                <div class="step__text">Как человек поймёт предложение и дойдёт до действия.</div>
+              </div>
+              <div class="step">
+                <div class="step__top"><span class="muted">step</span><span class="muted">03</span></div>
+                <div class="step__title">Собираю структуру и сценарий</div>
+                <div class="step__text">Блоки, логика, тексты и точки контакта.</div>
+              </div>
+              <div class="step">
+                <div class="step__top"><span class="muted">step</span><span class="muted">04</span></div>
+                <div class="step__title">Создаю прототип</div>
+                <div class="step__text">Быстро собираю первый рабочий вариант.</div>
+              </div>
+              <div class="step">
+                <div class="step__top"><span class="muted">step</span><span class="muted">05</span></div>
+                <div class="step__title">Тестирую и дорабатываю</div>
+                <div class="step__text">Улучшаю UX, формулировки и детали взаимодействия.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Проекты -->
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section__head reveal">
+            <div class="eyebrow">Проекты</div>
+            <h2 class="h2">Первые проекты и демонстрация подхода</h2>
+            <p class="lead muted">Оформлены как сильные прототипы — чтобы портфолио легко расширялось.</p>
+          </div>
+
+          <div class="projects reveal">
+            <!--
+              ВАЖНО: ссылки сейчас заглушки "#".
+              Менять ссылки на реальные GitHub Pages можно здесь: href="..."
+            -->
+            <article class="project">
+              <div class="project__head">
+                <div>
+                  <h3 class="project__title">Бухгалтерский сайт</h3>
+                  <div class="project__type muted">Лендинг / сайт услуг</div>
+                </div>
+                <span class="pill pill--neutral"><span class="pill__dot"></span>prototype</span>
+              </div>
+              <p class="project__desc">
+                Сайт для бухгалтерских услуг с упором на доверие, структуру, понятный оффер и путь клиента.
+              </p>
+              <ul class="list">
+                <li>первый экран с оффером</li>
+                <li>блок услуг</li>
+                <li>карточки преимуществ</li>
+                <li>место для заявки</li>
+              </ul>
+              <a class="btn btn--secondary" href="#">Открыть проект →</a>
+            </article>
+
+            <article class="project">
+              <div class="project__head">
+                <div>
+                  <h3 class="project__title">Игра «Поймай штраф»</h3>
+                  <div class="project__type muted">Мини-игра / интерактив</div>
+                </div>
+                <span class="pill pill--neutral"><span class="pill__dot"></span>prototype</span>
+              </div>
+              <p class="project__desc">
+                Игровая механика для бухгалтерского сайта: показывает ценность порядка в учёте через простой игровой
+                сценарий.
+              </p>
+              <ul class="list">
+                <li>игровые раунды</li>
+                <li>жизни / штрафы / бонусы</li>
+                <li>финальный результат</li>
+                <li>вовлекающий формат</li>
+              </ul>
+              <a class="btn btn--secondary" href="#">Играть →</a>
+            </article>
+
+            <article class="project">
+              <div class="project__head">
+                <div>
+                  <h3 class="project__title">Калькулятор НДФЛ</h3>
+                  <div class="project__type muted">Калькулятор / инструмент</div>
+                </div>
+                <span class="pill pill--neutral"><span class="pill__dot"></span>prototype</span>
+              </div>
+              <p class="project__desc">Интерактивный калькулятор для расчёта НДФЛ с прогрессивной шкалой.</p>
+              <ul class="list">
+                <li>ввод суммы</li>
+                <li>расчёт налога</li>
+                <li>понятный результат</li>
+                <li>полезный инструмент для пользователя</li>
+              </ul>
+              <a class="btn btn--secondary" href="#">Попробовать →</a>
+            </article>
+
+            <article class="project">
+              <div class="project__head">
+                <div>
+                  <h3 class="project__title">Сайт цветочного магазина с AI-ассистентом</h3>
+                  <div class="project__type muted">Сайт / AI-консультант</div>
+                </div>
+                <span class="pill pill--neutral"><span class="pill__dot"></span>prototype</span>
+              </div>
+              <p class="project__desc">
+                Сайт цветочного магазина, где AI-помощник помогает подобрать букет и оставить заявку.
+              </p>
+              <ul class="list">
+                <li>сайт-витрина</li>
+                <li>помощник по выбору</li>
+                <li>сбор заявки</li>
+                <li>сценарий консультации</li>
+              </ul>
+              <a class="btn btn--secondary" href="#">Открыть проект →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Решения под разные ниши -->
+      <section class="section" id="solutions">
+        <div class="container">
+          <div class="section__head reveal">
+            <div class="eyebrow">Решения под разные ниши</div>
+            <h2 class="h2">Подбираю digital-формат под задачу бизнеса</h2>
+            <p class="lead muted">
+              Один бизнес может нуждаться в сайте, другой — в боте, третий — в калькуляторе, игре, квизе или AI-помощнике.
+              Я смотрю на задачу и подбираю подходящий формат.
+            </p>
+          </div>
+
+          <div class="niches reveal">
+            <article class="niche">
+              <div class="niche__head">
+                <h3 class="niche__title">Бухгалтерские услуги</h3>
+                <span class="pill pill--neutral"><span class="pill__dot"></span>modules</span>
+              </div>
+              <ul class="list list--arrow">
+                <li>сайт услуг</li>
+                <li>AI-ассистент на сайте</li>
+                <li>чат-бот для заявок</li>
+                <li>налоговые калькуляторы</li>
+                <li>мини-игры и интерактивы</li>
+              </ul>
+            </article>
+
+            <article class="niche">
+              <div class="niche__head">
+                <h3 class="niche__title">Цветочный бизнес</h3>
+                <span class="pill pill--neutral"><span class="pill__dot"></span>modules</span>
+              </div>
+              <ul class="list list--arrow">
+                <li>сайт-витрина</li>
+                <li>AI-помощник по подбору букета</li>
+                <li>квиз для выбора подарка</li>
+                <li>чат-бот для заказа</li>
+                <li>сезонные промо-игры</li>
+              </ul>
+            </article>
+
+            <article class="niche">
+              <div class="niche__head">
+                <h3 class="niche__title">Другие ниши</h3>
+                <span class="pill pill--neutral"><span class="pill__dot"></span>modules</span>
+              </div>
+              <ul class="list list--arrow">
+                <li>лендинг</li>
+                <li>бот</li>
+                <li>квиз</li>
+                <li>калькулятор</li>
+                <li>мини-приложение</li>
+                <li>AI-консультант</li>
+              </ul>
+            </article>
+          </div>
+
+          <p class="muted reveal" style="margin-top: 18px">
+            Часть форматов уже есть в первых проектах, часть — в планах для тестирования и развития портфолио.
+          </p>
+        </div>
+      </section>
+
+      <!-- О себе -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section__head reveal">
+            <div class="eyebrow">О себе</div>
+            <h2 class="h2">Digital‑специалист, который собирает работающие прототипы</h2>
+          </div>
+
+          <div class="about reveal">
+            <div class="about__text">
+              <!-- Текст можно менять здесь -->
+              <p>
+                Я Мария, digital-специалист на старте практики. Изучаю нейросети, SMM, создание сайтов, ботов и
+                digital-продуктов. Собираю проекты с помощью ИИ, no-code и vibe-coding подхода: от идеи и логики до
+                первого рабочего прототипа.
+              </p>
+              <p>
+                Для меня важно не просто сделать красивую страницу, а продумать, как пользователь будет понимать
+                предложение, взаимодействовать с проектом и оставлять заявку.
+              </p>
+            </div>
+            <div class="about__focus">
+              <div class="focus">
+                <div class="focus__title">Фокус</div>
+                <div class="focus__grid">
+                  <div class="focus__item">
+                    <div class="focus__k muted">стиль</div>
+                    <div class="focus__v">Dark AI / Fintech / Neon</div>
+                  </div>
+                  <div class="focus__item">
+                    <div class="focus__k muted">цель</div>
+                    <div class="focus__v">запускать быстро</div>
+                  </div>
+                  <div class="focus__item">
+                    <div class="focus__k muted">ценность</div>
+                    <div class="focus__v">логика + UX</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Контакты -->
+      <section class="section" id="contacts">
+        <div class="container">
+          <div class="section__head reveal">
+            <div class="eyebrow">Контакты</div>
+            <h2 class="h2">Есть идея для сайта, бота или AI-проекта?</h2>
+            <p class="lead muted">Напишите мне — обсудим задачу и подумаем, какой формат лучше подойдёт.</p>
+          </div>
+
+          <div class="contact-card reveal">
+            <div class="contact-card__glow" aria-hidden="true"></div>
+            <div class="contact-card__row">
+              <div>
+                <div class="contact-card__title">Связаться</div>
+                <div class="muted">
+                  <!-- Контакты можно менять тут -->
+                  Выберите удобный канал — ссылки сейчас заглушки, можно заменить.
+                </div>
+              </div>
+              <div class="contact-card__actions">
+                <!--
+                  ВАЖНО: замените ссылки на свои
+                  Telegram: href="https://t.me/your_username"
+                  Email:    href="mailto:yourmail@example.com"
+                  VK:       href="https://vk.com/your_page"
+                -->
+                <a class="btn btn--secondary" href="https://t.me/your_username" target="_blank" rel="noopener noreferrer"
+                  >Telegram →</a
+                >
+                <a class="btn btn--secondary" href="mailto:yourmail@example.com">Email →</a>
+                <a class="btn btn--secondary" href="https://vk.com/your_page" target="_blank" rel="noopener noreferrer"
+                  >VK →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="muted">© <span id="year"></span> Maria Digital Lab</div>
+        <div class="muted">sites • bots • AI • calculators • games</div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
