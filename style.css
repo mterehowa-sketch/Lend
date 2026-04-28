@@ -1119,6 +1119,11 @@ a {
   height: 100%;
 }
 
+.about-visual-image {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
 .image-container img {
   width: 100%;
   height: 100%;
