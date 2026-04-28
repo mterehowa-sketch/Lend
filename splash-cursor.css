@@ -1,0 +1,19 @@
+/* Subtle cursor trail overlay */
+#splash-cursor {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  pointer-events: none;
+  z-index: 6;
+  opacity: 0.28;
+  mix-blend-mode: screen;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #splash-cursor {
+    display: none;
+  }
+}
+
