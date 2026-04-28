@@ -7,8 +7,12 @@
   - текущий год в футере
 */
 
+// Признак, что JS активен: используем для reveal (чтобы без JS не было пустого экрана)
+document.documentElement.classList.add('js')
+
 // Текущий год в футере
-document.getElementById('year').textContent = String(new Date().getFullYear())
+const yearNode = document.getElementById('year')
+if (yearNode) yearNode.textContent = String(new Date().getFullYear())
 
 // Мягкий "живой" glow в фоне — следует за курсором/тапом.
 // На touch-устройствах будет работать по последнему касанию.
